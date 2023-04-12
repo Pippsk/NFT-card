@@ -1,0 +1,212 @@
+
+
+
+/* ### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%) */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --softblue:hsl(215, 51%, 70%);
+    --cyan:hsl(178, 100%, 50%);
+    --mainBG:hsl(217, 54%, 11%);
+    --cardBG:hsl(216, 50%, 16%);
+    --line:hsl(215, 32%, 27%);
+    --white:hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 40px 20px;
+    background-color: var(--mainBG);
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif; ;
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container{
+    background-color: var(--cardBG);
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+}
+
+.image_top{
+    border-radius: 15px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.image_top1{
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+.image_overlay{
+    position: absolute;
+    border-radius: 15px;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(178, 100%, 50%, 60%);
+    transition: all .5s;
+    opacity: 0;
+}
+
+.image_overlay:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.image_overlay1{
+    position: absolute;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title, .description, .info{
+    margin-bottom:20px;
+}
+
+.title{
+    color: var(--white); 
+    transition: color .3s; 
+}
+
+.title:hover, .author span:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.description{
+    color: var(--softblue);
+    line-height: 1.5;
+}
+
+.info{
+    display: flex;
+    position: relative;
+
+}
+
+.info::after{
+    content: "";
+    background-color: var(--line);
+    width: 100%;
+    height: 1px;
+    display: inline-block;
+    position: absolute;
+    top: 200%;
+    
+}
+
+.value{
+    margin-right: auto;
+    font-size: 15px;
+}
+
+.value p, .time p{
+    display: flex;
+    align-items: center;
+}
+
+.value p{
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.value img, .time img{
+    padding-right: 8px;
+}
+
+.time p{
+    color: var(--softblue);
+    font-size: 15px;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.author img{
+    width: 30px;
+    border: 1.5px solid white;
+    border-radius: 50%;
+}
+
+.author p{
+    color: var(--softblue);
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+.author span{
+    color: var(--white);
+    transition: color .3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
